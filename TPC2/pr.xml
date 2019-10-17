@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/Users/Brunomac/Desktop/Mestrado/PLC/PRI/TPC2/pr.dtd">
+<pr>
+    <identificacao>
+        <keyname></keyname>
+        <title></title>
+        <subtitle></subtitle>
+        <begindate></begindate>
+        <enddate></enddate>
+        <supervisor></supervisor>
+    </identificacao>
+    <workteam>
+        <nome></nome>
+        <email></email>
+    </workteam>
+    <abstract>
+        <paragrafos></paragrafos>
+    </abstract>
+    <deliverables>
+        <link></link>
+    </deliverables>
+</pr>
