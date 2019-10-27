@@ -1,0 +1,11 @@
+{
+  "name": "tpc4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "music.js",
+  "scripts": {
+    "start": "node music"
+  },
+  "author": "",
+  "license": "ISC"
+}
