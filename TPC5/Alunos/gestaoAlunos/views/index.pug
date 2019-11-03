@@ -1,0 +1,35 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Novo Aluno
+            .w3-container
+                form.w3-container(action='/Alunos' method='POST')
+                    label
+                        b Nome
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='Nome')
+                    label 
+                        b Curso 
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='Curso')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Enviar')
+        .w3-card-4
+            table.w3-table-all
+                tr
+                    th Identificador
+                    th Nome
+                    th Curso
+                each i in lista
+                    tr
+                        td= i.Id
+                        td= i.Nome
+                        td= i.Curso
+                        td  
+                            form.form-inline(method="get" action=`/Alunos/${i.Identificador}`)
+                                button.w3-button.w3-round-xlarge.w3-blue-grey(type="submit") Visualizar
+                        td 
+                            button.w3-button.w3-circle.w3-blue-grey(onclick="apagaAluno('" + i.Id + "')") Apagar
+        footer.w3-container.w3-teal
+            address Gerado por Lista de Alunos App::
+                
+

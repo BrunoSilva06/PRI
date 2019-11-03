@@ -1,0 +1,48 @@
+[
+    {
+        "Id" : "1",
+        "Nome" : "Bruno Silva",
+        "Curso" : "MIEI",
+        "Notas" : [
+                    {
+                        "Indicador" : "TP1",
+                        "Nota" : "12"
+                    },
+                    {
+                        "Indicador" : "TP2",
+                        "Nota" : "14"
+                    },
+                    {
+                        "Indicador" : "TP3",
+                        "Nota" : "15"
+                    },
+                    {
+                        "Indicador" : "TP4",
+                        "Nota" : "14"
+                    }
+                  ]
+    },
+    {
+        "Id" : "2",
+        "Nome" : "Tiago Pereira",
+        "Curso" : "MIEI",
+        "Notas" : [
+                    {
+                        "Indicador" : "TP1",
+                        "Nota" : "10"
+                    },
+                    {
+                        "Indicador" : "TP2",
+                        "Nota" : "13"
+                    },
+                    {
+                        "Indicador" : "TP3",
+                        "Nota" : "16"
+                    },
+                    {
+                        "Indicador" : "TP4",
+                        "Nota" : "15"
+                    }
+                  ]
+    }
+]
