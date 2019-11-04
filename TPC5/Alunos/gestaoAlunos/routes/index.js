@@ -37,4 +37,19 @@ router.get('/Alunos/:idAluno', function(req, res) {
 })
 
 
+router.post('/Alunos' , function (req,res) {
+  var registo = req.body
+  jsonfile.readFile(myBD, (erro,alunos)=> {
+    if(!erro){
+      registo.Notas = [];
+      alunos.push(registo)
+      jsonfile.writeFile(myBD,alunos,erro =>{
+        if(erro) console.log(erro)
+        else console.log('Aluno registado com sucesso.')
+      })
+    }
+    res.render('index',{lista : alunos})
+  })
+});
+
 module.exports = router;
