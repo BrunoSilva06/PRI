@@ -25,7 +25,7 @@ block content
                         td= i.Nome
                         td= i.Curso
                         td  
-                            form.form-inline(method="get" action=`/Alunos/${i.Identificador}`)
+                            form.form-inline(method="get" action=`/Alunos/${i.Id}`)
                                 button.w3-button.w3-round-xlarge.w3-blue-grey(type="submit") Visualizar
                         td 
                             button.w3-button.w3-circle.w3-blue-grey(onclick="apagaAluno('" + i.Id + "')") Apagar
