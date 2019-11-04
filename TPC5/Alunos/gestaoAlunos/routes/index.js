@@ -52,4 +52,25 @@ router.post('/Alunos' , function (req,res) {
   })
 });
 
+
+router.delete('/Alunos/:idAluno', function (req,res) {
+  var id = req.params.idAluno
+  jsonfile.readFile(myBD, (erro,alunos) => {
+    if(!erro){
+    var index = alunos.findIndex(c => c.Id == id)
+      if(index > -1){
+        alunos.splice(index,1)
+        jsonfile.writeFile(myBD, alunos, erro =>{
+          if(erro) console.log(erro)
+          else console.log('Aluno removido da BD!')
+          })
+      }
+      else {
+      console.log('Erro: Id sem correspondência!')
+      }
+    }
+      res.render('index',{lista : alunos})
+    })
+})
+
 module.exports = router;
