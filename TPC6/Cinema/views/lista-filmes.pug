@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .w3-container
+        h1 Lista de filmes no dataset
+        a(href="http://localhost:3006/") Menu principal
+        table.w3-table-all
+            tr
+                th Título
+                th Ano
+                th Cast
+                th Genre
+            each filme in lista
+                tr
+                    td= filme.title
+                    td= filme.year
+                    td= filme.cast
+                    td= filme.genre
