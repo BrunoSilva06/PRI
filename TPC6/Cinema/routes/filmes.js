@@ -18,6 +18,18 @@ router.get('/inserir', function(req, res) {
         res.render('form-filme');
 });
 
+router.get('/:idFilme', function(req, res, next) {
+    
+  axios.get('http://localhost:3006/api/filmes/' + req.params.idFilme)
+  .then(dados => {
+    res.render('filme', { lista: dados.data });
+  })
+  .catch(erro => {
+    res.render('error', {error: erro})
+  })
+
+});
+
 
 router.post('/', function(req,res){
     axios.post('http://localhost:3006/api/filmes', req.body)
