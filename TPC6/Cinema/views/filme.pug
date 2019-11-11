@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .w3-container
+        h1= lista.title     
+        table.w3-table-all
+            tr
+                th Título
+                th Ano
+                th Cast
+                th Genre
+                tr
+                    td= lista.title
+                    td= lista.year
+                    td= lista.cast
+                    td= lista.genre
+        a(href="http://localhost:3006/") Menu principal
