@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    .w3-container
+        h1= lista.designacao  
+        table.w3-table-all
+            tr
+                th Estado
+                th Sigla
+                th Designação
+                th ID
+                tr
+                    td= lista.estado
+                    td= lista.sigla
+                    td= lista.designacao
+                    td= lista.id
+
+                if(lista.ent)   
+                    each entidade in ent
+                            td= ent.sigla
+                            td= ent.designacao
+                            td= ent.id
+                if(lista.proc)
+                    each processo in proc
+                            td= proc.codigo
+                            td= proc.titulo
+                            td= proc.id 
+        a(href="http://localhost:4080/") Menu principal
