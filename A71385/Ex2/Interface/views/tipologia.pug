@@ -15,14 +15,21 @@ block content
                     td= lista.designacao
                     td= lista.id
 
-                if(lista.ent)   
-                    each entidade in ent
-                            td= ent.sigla
-                            td= ent.designacao
-                            td= ent.id
-                if(lista.proc)
-                    each processo in proc
-                            td= proc.codigo
-                            td= proc.titulo
-                            td= proc.id 
+                if(ent.length)
+                    tr
+                        th Entidades
+                        td   
+                            each entidade in ent
+                                    td= entidade.sigla
+                                    td= entidade.designacao
+                                    td= entidade.id
+                if(proc.length)
+                    tr
+                        th Processos
+                        td  
+                            each processo in proc
+                                    td= processo.codigo
+                                    td= processo.titulo
+                                    td= processo.id 
+
         a(href="http://localhost:4080/") Menu principal
